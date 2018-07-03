@@ -1,0 +1,156 @@
+html, body {
+  color: #272727;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  padding-bottom: 10rem; }
+
+header {
+  border-bottom: 1px solid darkgray;
+  padding: 1rem;
+  position: relative; }
+  header * {
+    margin: 0;
+    padding: 0; }
+  header h1 {
+    font-size: 38px;
+    line-height: 1; }
+  header [class^="icon"] {
+    height: 40px;
+    width: 40px; }
+  header img {
+    width: 100%; }
+  header li a {
+    color: currentColor;
+    text-decoration: none; }
+  header li > a:first-child,
+  header li span:first-child,
+  header li span:nth-child(2) {
+    font-weight: bold;
+    text-transform: uppercase; }
+  header li span:last-child {
+    display: block;
+    color: dimgray;
+    clear: both;
+    font-size: 98%;
+    line-height: 1.5;
+    padding-top: .4rem; }
+    header li span:last-child a {
+      border-bottom: 1px solid;
+      display: inline-block; }
+
+h1 {
+  font-family: "Anton", sans-serif; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+button {
+  background: none;
+  border: none; }
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header nav {
+      background-color: inherit;
+      border-bottom: 1px solid darkgray;
+      width: 320px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding-bottom: .7rem;
+      transform: translateX(-100%); }
+    header .show-nav {
+      transition: transform .1s ease;
+      transform: translateX(0); }
+    header .nav-item__simple {
+      border-bottom: none;
+      padding: .4rem 1rem; }
+    header li:not(.nav-item__simple) + .nav-item__simple {
+      margin-top: .7rem; }
+    header li {
+      border-bottom: 1px solid darkgray;
+      padding: 1rem; }
+      header li > a:first-child,
+      header li span:first-child {
+        font-size: 120%; }
+      header li span:first-child {
+        float: left; }
+      header li span:nth-child(2) {
+        color: slategray;
+        float: right;
+        font-size: 90%;
+        margin-top: 3px; } }
+@media screen and (min-width: 321px) {
+  header nav {
+    border-right: 1px solid darkgray; } }
+@media screen and (min-width: 769px) {
+  header .icon-menu {
+    display: none; }
+  header .icon-search,
+  header .icon-cart {
+    position: absolute;
+    top: 1rem; }
+  header .icon-search {
+    right: 4rem; }
+  header .icon-cart {
+    right: 1rem; }
+  header nav {
+    border-right: none;
+    border-bottom: none;
+    margin-top: 1rem; }
+  header li {
+    display: inline-block; }
+  header li span:first-child,
+  header .nav-item__simple a {
+    display: block;
+    font-size: 84%;
+    padding: .5rem; }
+  header li span:not(:first-child) {
+    display: none; }
+  header li:not(.nav-item__simple) {
+    position: relative; }
+    header li:not(.nav-item__simple):hover::before, header li:not(.nav-item__simple):focus::before {
+      border-bottom: 10px solid #494949;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      content: '';
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1; }
+    header li:not(.nav-item__simple):hover span:nth-child(2), header li:not(.nav-item__simple):focus span:nth-child(2) {
+      display: none; }
+    header li:not(.nav-item__simple):hover span:last-child, header li:not(.nav-item__simple):focus span:last-child {
+      background-color: white;
+      border: 1px solid darkgray;
+      border-radius: 6px;
+      display: block;
+      padding: .5rem;
+      position: absolute;
+      top: 2rem;
+      left: -.5rem;
+      width: 32vw; }
+      header li:not(.nav-item__simple):hover span:last-child a:hover,
+      header li:not(.nav-item__simple):hover span:last-child a:focus, header li:not(.nav-item__simple):focus span:last-child a:hover,
+      header li:not(.nav-item__simple):focus span:last-child a:focus {
+        background-color: whitesmoke;
+        color: black; }
+  header .nav-item__simple a {
+    color: currentColor;
+    text-decoration: none; } }
+
+/*# sourceMappingURL=main.css.map */
