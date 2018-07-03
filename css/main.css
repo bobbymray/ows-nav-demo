@@ -8,6 +8,8 @@ html, body {
   box-sizing: border-box; }
 
 body {
+  margin: 0 auto;
+  max-width: 1600px;
   padding-bottom: 10rem; }
 
 header {
@@ -63,21 +65,15 @@ button {
     align-items: center; }
     header nav {
       background-color: inherit;
-      border-bottom: 1px solid darkgray;
       width: 320px;
+      width: 100%;
       position: absolute;
       top: 100%;
       left: 0;
-      padding-bottom: .7rem;
       transform: translateX(-100%); }
     header .show-nav {
       transition: transform .1s ease;
       transform: translateX(0); }
-    header .nav-item__simple {
-      border-bottom: none;
-      padding: .4rem 1rem; }
-    header li:not(.nav-item__simple) + .nav-item__simple {
-      margin-top: .7rem; }
     header li {
       border-bottom: 1px solid darkgray;
       padding: 1rem; }
@@ -91,9 +87,6 @@ button {
         float: right;
         font-size: 90%;
         margin-top: 3px; } }
-@media screen and (min-width: 321px) {
-  header nav {
-    border-right: 1px solid darkgray; } }
 @media screen and (min-width: 769px) {
   header .icon-menu {
     display: none; }
@@ -110,17 +103,9 @@ button {
     border-bottom: none;
     margin-top: 1rem; }
   header li {
-    display: inline-block; }
-  header li span:first-child,
-  header .nav-item__simple a {
-    display: block;
-    font-size: 84%;
-    padding: .5rem; }
-  header li span:not(:first-child) {
-    display: none; }
-  header li:not(.nav-item__simple) {
+    display: inline-block;
     position: relative; }
-    header li:not(.nav-item__simple):hover::before, header li:not(.nav-item__simple):focus::before {
+    header li:hover::before, header li:focus::before {
       border-bottom: 10px solid #494949;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
@@ -132,9 +117,9 @@ button {
       left: 50%;
       transform: translateX(-50%);
       z-index: -1; }
-    header li:not(.nav-item__simple):hover span:nth-child(2), header li:not(.nav-item__simple):focus span:nth-child(2) {
+    header li:hover span:nth-child(2), header li:focus span:nth-child(2) {
       display: none; }
-    header li:not(.nav-item__simple):hover span:last-child, header li:not(.nav-item__simple):focus span:last-child {
+    header li:hover span:last-child, header li:focus span:last-child {
       background-color: white;
       border: 1px solid darkgray;
       border-radius: 6px;
@@ -144,13 +129,16 @@ button {
       top: 2rem;
       left: -.5rem;
       width: 32vw; }
-      header li:not(.nav-item__simple):hover span:last-child a:hover,
-      header li:not(.nav-item__simple):hover span:last-child a:focus, header li:not(.nav-item__simple):focus span:last-child a:hover,
-      header li:not(.nav-item__simple):focus span:last-child a:focus {
+      header li:hover span:last-child a:hover,
+      header li:hover span:last-child a:focus, header li:focus span:last-child a:hover,
+      header li:focus span:last-child a:focus {
         background-color: whitesmoke;
         color: black; }
-  header .nav-item__simple a {
-    color: currentColor;
-    text-decoration: none; } }
+  header li span:first-child {
+    display: block;
+    font-size: 84%;
+    padding: .5rem; }
+  header li span:not(:first-child) {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */

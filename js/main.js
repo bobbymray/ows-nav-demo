@@ -13,10 +13,3 @@ navToggle.addEventListener('click', function(e) {
         navToggleImage.src = 'menu.png';
     }
 });
-
-body.addEventListener('click', function(e) {
-    if (e.target !== navToggleImage && navigation.classList.contains('show-nav') && !navigation.contains(e.target)) {
-        navigation.classList.toggle('show-nav');
-        navToggleImage.src = 'menu.png';
-    }
-});
