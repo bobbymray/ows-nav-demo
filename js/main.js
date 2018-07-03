@@ -17,6 +17,6 @@ navToggle.addEventListener('click', function(e) {
 body.addEventListener('click', function(e) {
     if (e.target !== navToggleImage && navigation.classList.contains('show-nav') && !navigation.contains(e.target)) {
         navigation.classList.toggle('show-nav');
-        navToggleImage.src = '../icons/menu.png';
+        navToggleImage.src = 'menu.png';
     }
 });
