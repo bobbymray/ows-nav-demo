@@ -8,9 +8,9 @@ navToggle.addEventListener('click', function(e) {
     navigation.classList.toggle('show-nav');
 
     if (navigation.classList.contains('show-nav')) {
-        navToggleImage.src = '../icons/close.png';
+        navToggleImage.src = 'close.png';
     } else {
-        navToggleImage.src = '../icons/menu.png';
+        navToggleImage.src = 'menu.png';
     }
 });
 
